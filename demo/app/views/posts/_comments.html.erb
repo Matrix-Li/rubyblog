@@ -1,0 +1,13 @@
+<h2>Comments</h2>
+
+<div id="comments">
+    <% if post.comments.present? %>
+        <% post.comments.each do |comment| %>
+        <p>
+            <%= comment.content %>
+        </p>
+        <% end %>
+    <% end %>
+</div>
+
+<%= render "comments/new", post: post %>
